@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function Practical
+      // area အတွက် fun လေးတည်ဆောက်ပါမယ်
+      // width & breadth ယူပါမယ်area ကိုတွက် ပါမယ်
+      // အဖြေ ကို Square feet နဲ့ ထုတ်ပေးပါမယ်
+
+      // let record = []; // တွက်ချက်မှု w,b,result တွေကို မှတ်တမ်းအဖြစ်သိမ်းထားပါမယ်
+      // let index = 0;
+      // function saveRecord(w, b, r) {
+      //   record[index] = {
+      //     width: w,
+      //     breadth: b,
+      //     result: r,
+      //   };
+      //   index++;
+      // }
+      // let calc = function (width, breadth) {
+      //   let calcArea = width * breadth;
+      //   let result = calcArea + " " + "sqft";
+      //   saveRecord(width, breadth, result);
+      //   return result;
+      // };
+      // console.log(calc(20,60));
+
+      //   USD,EUR,SGD ပြောင်းလဲ တဲ့ function လေးတည်ဆောက်ပါမယ်/
+      // rate ကို ကြိုပေးထားပါတယ်
+
+      let rates = {
+        USD: 1636.0,
+        CNY: 252.99,
+        
+      };
+      function exchangeToMMK(amount,currency) {
+        
+        
+        let calc =amount * rates[currency];
+        let result = calc + " mmk"
+        return result;
+        
+      };
+
+
+      function exchangeToMMK(amount,currency) {
+        
+        
+        let calc =amount / rates[currency];
+        let result = calc + currency;
+        return result;
+        
+      };
+
+      // သစ်သီးဝယ်မယ်/ ကျသင့်ငွေရယ်/ အခွန် ၅% ရယ်/ စုစုပေါင်းထုတ်ပေးရပါမယ်
+
+      let priceFruit = {
+        orange : 100,
+        apple : 250,
+        mango : 500,
+
+      }
+      function calcTax ( amount, percentage = 5) {
+        return (amount*percentage)/100
+
+      }
+      function calcCost(quentity , fruit){
+        let calc = quentity * priceFruit[fruit];
+        let result = calc + " mmk"
+        return {
+          name : fruit,
+          unitPrice : priceFruit[fruit],
+          quentity,
+          cost : calc,
+          tax : calcTax(calc),
+          total : calc + calcTax(calc)
+        };
+      }
+
+    </script>
+  </body>
+</html>

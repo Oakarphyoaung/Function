@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log(b)
+        let name = "Oakar"
+        // Function Statement
+        function aa(){
+            return "This is aa";
+        };
+        // Function Expression
+        let run = function(){
+            return aa() + "this is run";
+        };
+        // IFFE
+        (function(){
+            console.log("This is IIFE");
+        })()
+        // Function Invole Another Function
+        console.log(run());
+        // BlockScope
+        {
+            let a = "I am a";
+            var b = "I am b";
+        }
+        let a = "I am a";
+        var b = "I am b";
+
+        // console.log(b);
+
+        // LocalScope
+        //GlobalScope
+        function cc(){
+            let a = "I am a";
+            var b = "I am b";
+            console.log(a);
+            console.log(b);
+            console.log(name);
+        }
+        // Hoisting
+        // fun declaration are top 
+
+
+
+    </script>
+    
+</body>
+</html>
